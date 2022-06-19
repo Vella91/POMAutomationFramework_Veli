@@ -16,9 +16,15 @@ public class DefaultPage {
     }
 
     //locators -> on the page that we are going to use in our tests, you can add locators that might be for future tests
-    By loginButton = By.id("nav-ling-login");
+    By loginButton = By.id("nav-link-login");
+    By postImage = By.xpath("//div/img");
+
     //methods that interact with the web element
     public void clickLoginButton(){
         driver.findElement(loginButton).click();
+    }
+
+    public void clickPostImage() {
+        driver.findElement(postImage).click();
     }
 }

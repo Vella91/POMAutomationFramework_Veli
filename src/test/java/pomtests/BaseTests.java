@@ -4,9 +4,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import pages.DefaultPage;
 import pages.HomePage;
 import pages.LoginModal;
@@ -20,7 +18,7 @@ public class BaseTests {
     LoginModal loginModal;
     HomePage homePage;
 
-    @BeforeTest
+    @BeforeMethod
     public void setUp() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
@@ -30,14 +28,15 @@ public class BaseTests {
         homePage = new HomePage(driver);
     }
 
-    @AfterTest
+    @AfterMethod
     public void tearDown() {
-
+        driver.quit();
     }
 
-    @Test
+
+    @Test(testName = "user successfully logs in")
     public void loginTest() throws InterruptedException {
-        driver.get("http://training.skillo-bg.org");
+        driver.get("http://training.skillo-bg.com/");
         defaultPage.clickLoginButton();
         loginModal.enterUsername("test51");
         loginModal.enterPassword("test51");
@@ -47,5 +46,11 @@ public class BaseTests {
         Assert.assertTrue(homePage.isUserLoggedIn());
 
         Thread.sleep(1000);
+    }
+
+    @Test
+    public void likePost(){
+        driver.get("http://training.skillo-bg.com/");
+        defaultPage.clickPostImage();
     }
 }
