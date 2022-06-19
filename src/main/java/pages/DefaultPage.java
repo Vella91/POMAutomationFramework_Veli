@@ -2,6 +2,8 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 /*default page is opened after the URL is hit*/
@@ -16,15 +18,15 @@ public class DefaultPage {
     }
 
     //locators -> on the page that we are going to use in our tests, you can add locators that might be for future tests
-    By loginButton = By.id("nav-link-login");
-    By postImage = By.xpath("//div/img");
+    @FindBy(id = "nav-link-login")
+    WebElement loginButton;
+
+
+  /*  By loginButton = By.id("nav-link-login");
+    By postImage = By.xpath("//div[@class='post-feed-img']/img");*/
 
     //methods that interact with the web element
     public void clickLoginButton(){
-        driver.findElement(loginButton).click();
-    }
-
-    public void clickPostImage() {
-        driver.findElement(postImage).click();
+        loginButton.click();
     }
 }

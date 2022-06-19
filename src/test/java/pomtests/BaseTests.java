@@ -3,11 +3,15 @@ package pomtests;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.*;
 import pages.DefaultPage;
 import pages.HomePage;
 import pages.LoginModal;
+import pages.PostModal;
 
 import java.time.Duration;
 
@@ -17,15 +21,19 @@ public class BaseTests {
     DefaultPage defaultPage;
     LoginModal loginModal;
     HomePage homePage;
+    PostModal postModal;
+    WebDriverWait wait;
 
     @BeforeMethod
     public void setUp() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         defaultPage = new DefaultPage(driver);
         loginModal = new LoginModal(driver);
         homePage = new HomePage(driver);
+        postModal = new PostModal(driver);
     }
 
     @AfterMethod
@@ -49,8 +57,17 @@ public class BaseTests {
     }
 
     @Test
-    public void likePost(){
+    public void likePost() throws InterruptedException {
         driver.get("http://training.skillo-bg.com/");
-        defaultPage.clickPostImage();
+        defaultPage.clickLoginButton();
+        loginModal.enterUsername("test51");
+        loginModal.enterPassword("test51");
+        loginModal.clickSignIn();
+        homePage.clickPostImage();
+        postModal.clickHeartIcon();
+
+        Assert.assertTrue(postModal.IsHeartIconClicked());
+
+        Thread.sleep(1000);
     }
 }

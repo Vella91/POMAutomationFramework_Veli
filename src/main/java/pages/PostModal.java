@@ -12,7 +12,6 @@ public class PostModal {
     public PostModal(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
-
     }
 
     @FindBy(xpath = "//i[@class='like far fa-heart fa-2x']")
@@ -38,4 +37,9 @@ public class PostModal {
    /* public void clickPostAuthorNameHyperlink(){
         driver.findElement(postModalAuthorNameHyperlink).click();
     }*/
+
+    //assertion methods
+    public boolean IsHeartIconClicked(){
+        return postModalHeartIcon.isSelected();
+    }
 }

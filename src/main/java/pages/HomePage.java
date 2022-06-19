@@ -18,20 +18,26 @@ public class HomePage {
     }
 
     //locators using PageFactory - we can add as many locators as we want
-    @FindBy(id="nav-link-new-post")
+    @FindBy(id = "nav-link-new-post")
     WebElement newPostButton;
 
     @FindBy(xpath = "//i[contains(@class, 'sign-out')]")
     WebElement logoutButton;
 
+    @FindBy(xpath = "//div[@class='post-feed-img']/img[1]")
+    WebElement postImage;
+
     //methods
+    public void clickPostImage() {
+        postImage.click();
+    }
 
     //assertion methods
-    public boolean isNewPostButtonDisplayed(){
+    public boolean isNewPostButtonDisplayed() {
         return newPostButton.isDisplayed();
     }
 
-    public boolean isUserLoggedIn(){
+    public boolean isUserLoggedIn() {
         return newPostButton.isDisplayed() && logoutButton.isDisplayed();
     }
 }
