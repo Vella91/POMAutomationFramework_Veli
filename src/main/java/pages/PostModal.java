@@ -20,6 +20,9 @@ public class PostModal {
     @FindBy(xpath = "//i[@class='ml-4 far fa-thumbs-down fa-2x']")
     WebElement postModalDislikeIcon;
 
+    @FindBy(xpath = "//i[@class='far fa-heart fa-2x liked']")
+    WebElement postModalFilledHeartIcon;
+
     /*
     By postModalImage = By.xpath("//div[@class='post-modal-img']/img");
     By postModalAuthorNameHyperlink = By.xpath("//div[@class='post-modal-comments']//a[@class='post-user']");
@@ -38,8 +41,10 @@ public class PostModal {
         driver.findElement(postModalAuthorNameHyperlink).click();
     }*/
 
+
+    //change the locator
     //assertion methods
     public boolean IsHeartIconClicked(){
-        return postModalHeartIcon.isSelected();
+        return postModalFilledHeartIcon.isDisplayed();
     }
 }

@@ -60,8 +60,8 @@ public class BaseTests {
     public void likePost() throws InterruptedException {
         driver.get("http://training.skillo-bg.com/");
         defaultPage.clickLoginButton();
-        loginModal.enterUsername("test51");
-        loginModal.enterPassword("test51");
+        loginModal.enterUsername("test91");
+        loginModal.enterPassword("test91");
         loginModal.clickSignIn();
         homePage.clickPostImage();
         postModal.clickHeartIcon();
