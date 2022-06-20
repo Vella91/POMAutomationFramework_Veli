@@ -36,7 +36,7 @@ public class SmokeTests extends BaseTest {
         Thread.sleep(1000);
     }
 
-    @Test
+    @Test(retryAnalyzer = utils.Retry.class)
     public void createAccount(){
         driver.get("http://training.skillo-bg.com/");
         defaultPage.clickLoginButton();
@@ -44,7 +44,6 @@ public class SmokeTests extends BaseTest {
         signUpModal.registerUser();
         //same assert as on Login from HomePage PO
         Assert.assertTrue(homePage.isNewPostButtonDisplayed());
-
     }
 
     @Test

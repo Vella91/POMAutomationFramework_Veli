@@ -4,9 +4,10 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+import org.testng.ITestResult;
+import org.testng.annotations.*;
 import pages.*;
+import utils.Screenshot;
 
 import java.time.Duration;
 
@@ -25,6 +26,8 @@ public class BaseTest {
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+            //if we change the implicitWait duration to millisecond and small value
+            // we make the test flaky to test RETRY logic
             wait = new WebDriverWait(driver, Duration.ofSeconds(10));
             defaultPage = new DefaultPage(driver);
             loginModal = new LoginModal(driver);
@@ -34,7 +37,11 @@ public class BaseTest {
         }
 
         @AfterMethod
-        public void tearDown() {
+        public void tearDown(ITestResult result)
+        {
+            if (!result.isSuccess()){
+                Screenshot.capture(driver, "screenshots", result.getName());
+            }
             driver.quit();
         }
 
