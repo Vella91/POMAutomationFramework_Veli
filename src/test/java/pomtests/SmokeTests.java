@@ -2,6 +2,7 @@ package pomtests;
 
 import org.testng.Assert;
 import org.testng.annotations.*;
+import pages.UserPage;
 
 public class SmokeTests extends BaseTest {
 
@@ -47,7 +48,18 @@ public class SmokeTests extends BaseTest {
     }
 
     @Test
+    public void viewUserPageAndFollowUser() throws InterruptedException {
+        driver.get("http://training.skillo-bg.com/");
+        loginTest();
+        homePage.clickPostAuthorHyperlink();
+        userPage.clickFollowButton();
+        Assert.assertTrue(userPage.isUnfollowButtonDisplayed());
+    }
+
+
+    @Test
     public void logoutTest(){
+
         //logout functionality from every place
         //click the home button
         //click the logout button

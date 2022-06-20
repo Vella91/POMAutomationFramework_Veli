@@ -23,9 +23,16 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "//div[@class='post-feed-img']/img[1]")
     WebElement postImage;
 
+    @FindBy(xpath="//a[@class='post-user']")
+    WebElement postAuthorHyperlink;
+
     //methods
     public void clickPostImage() {
         postImage.click();
+    }
+
+    public void clickPostAuthorHyperlink(){
+        postAuthorHyperlink.click();
     }
 
     //assertion methods

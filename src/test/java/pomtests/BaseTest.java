@@ -19,6 +19,7 @@ public class BaseTest {
         HomePage homePage;
         PostModal postModal;
         SignUpModal signUpModal;
+        UserPage userPage;
         WebDriverWait wait;
 
         @BeforeMethod
@@ -34,6 +35,7 @@ public class BaseTest {
             homePage = new HomePage(driver);
             postModal = new PostModal(driver);
             signUpModal = new SignUpModal(driver);
+            userPage = new UserPage(driver);
         }
 
         @AfterMethod
