@@ -6,12 +6,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class PostModal {
+public class PostModal extends BasePage {
 
-    WebDriver driver;
     public PostModal(WebDriver driver) {
-        this.driver = driver;
-        PageFactory.initElements(driver, this);
+       super(driver);
     }
 
     @FindBy(xpath = "//i[@class='like far fa-heart fa-2x']")

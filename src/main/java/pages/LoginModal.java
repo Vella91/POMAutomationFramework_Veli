@@ -18,6 +18,7 @@ public class LoginModal {
         By userNameField = By.id("defaultLoginFormUsername");
         By passwordField = By.id("defaultLoginFormPassword");
         By signInButton = By.id("sign-in-button");
+        By registerButton = By.linkText("Register");
 
 
     //methods that interact with the web element
@@ -33,5 +34,9 @@ public class LoginModal {
 
     public void clickSignIn(){
         driver.findElement(signInButton).click();
+    }
+
+    public void clickRegisterButton() {
+        driver.findElement(registerButton).click();
     }
 }
