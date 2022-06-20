@@ -25,28 +25,28 @@ public class SignUpModal extends BasePage {
     @FindBy(id="sign-in-button")
     WebElement signUpbutton;
 
-    public void inputUsername(){
-        usernameField.sendKeys("testVel");
+    public void inputUsername(String username){
+        usernameField.sendKeys(username);
     }
 
-    public void inputEmail(){
-        emailField.sendKeys("vel@yopmail.com");
+    public void inputEmail(String email){
+        emailField.sendKeys(email);
     }
-    public void inputPassword(){
-        passwordField.sendKeys("testVel");
+    public void inputPassword(String password){
+        passwordField.sendKeys(password);
     }
-    public void inputConfirmPassword(){
-        confirmPasswordField.sendKeys("testVel");
+    public void inputConfirmPassword(String confirmPassword){
+        confirmPasswordField.sendKeys(confirmPassword);
     }
     public void clickSignUpButton(){
         signUpbutton.click();
     }
 
     public void registerUser(){
-        inputUsername();
-        inputEmail();
-        inputPassword();
-        inputConfirmPassword();
+        inputUsername("testvell");
+        inputEmail("testvel@yopmail.com");
+        inputPassword("testvell");
+        inputConfirmPassword("testvell");
         clickSignUpButton();
     }
 }
