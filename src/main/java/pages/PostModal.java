@@ -10,13 +10,13 @@ public class PostModal extends BasePage {
        super(driver);
     }
 
-    @FindBy(xpath = "//div/i[@class='far fa-heart fa-2x']")
+    @FindBy(xpath = "//div[@class='icons-container']/i[@class='like far fa-heart fa-2x']")
     WebElement postModalHeartIcon;
 
     @FindBy(xpath = "//i[@class='ml-4 far fa-thumbs-down fa-2x']")
     WebElement postModalDislikeIcon;
 
-    @FindBy(xpath = "//i[@class='far fa-heart fa-2x liked']")
+    @FindBy(xpath = "//div[@class='icons-container']/i[@class='like far fa-heart fa-2x liked']")
     WebElement postModalFilledHeartIcon;
 
     public WebElement getPostModalFilledHeartIcon() {

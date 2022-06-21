@@ -1,5 +1,6 @@
 package pomtests;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.*;
@@ -39,11 +40,10 @@ public class SmokeTests extends BaseTest {
     public void likePostTest() throws InterruptedException {
         driver.get("http://training.skillo-bg.com/");
         loginTest();
-      /*  defaultPage.clickLoginButton();
-        loginModal.enterUsername("test91");
-        loginModal.enterPassword("test91");
-        loginModal.clickSignIn();*/
         homePage.clickPostImage();
+/*
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//div[@class='icons-container']/i[@class='like far fa-heart fa-2x']"))));
+*/
         postModal.clickHeartIcon();
 
         wait.until(ExpectedConditions.visibilityOf(postModal.getPostModalFilledHeartIcon()));
