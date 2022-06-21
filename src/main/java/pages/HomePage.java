@@ -26,6 +26,13 @@ public class HomePage extends BasePage {
     @FindBy(xpath="//a[@class='post-user']")
     WebElement postAuthorHyperlink;
 
+    @FindBy(xpath = "//div[@id='toast-container']/*")
+    WebElement alertPopUpHomePage;
+
+    public WebElement getAlertPopUpHomePage() {
+        return alertPopUpHomePage;
+    }
+
     //methods
     public void clickPostImage() {
         postImage.click();
@@ -33,6 +40,14 @@ public class HomePage extends BasePage {
 
     public void clickPostAuthorHyperlink(){
         postAuthorHyperlink.click();
+    }
+
+    public void clickNewPostButton(){
+        newPostButton.click();
+    }
+
+    public void clickLogoutButton(){
+        logoutButton.click();
     }
 
     //assertion methods

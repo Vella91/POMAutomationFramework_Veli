@@ -1,10 +1,8 @@
 package pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
 public class PostModal extends BasePage {
 
@@ -12,7 +10,7 @@ public class PostModal extends BasePage {
        super(driver);
     }
 
-    @FindBy(xpath = "//i[@class='like far fa-heart fa-2x']")
+    @FindBy(xpath = "//div/i[@class='far fa-heart fa-2x']")
     WebElement postModalHeartIcon;
 
     @FindBy(xpath = "//i[@class='ml-4 far fa-thumbs-down fa-2x']")
@@ -20,6 +18,10 @@ public class PostModal extends BasePage {
 
     @FindBy(xpath = "//i[@class='far fa-heart fa-2x liked']")
     WebElement postModalFilledHeartIcon;
+
+    public WebElement getPostModalFilledHeartIcon() {
+        return postModalFilledHeartIcon;
+    }
 
     /*
     By postModalImage = By.xpath("//div[@class='post-modal-img']/img");
@@ -42,7 +44,7 @@ public class PostModal extends BasePage {
 
     //change the locator
     //assertion methods
-    public boolean IsHeartIconClicked(){
+    public boolean IsPostLiked(){
         return postModalFilledHeartIcon.isDisplayed();
     }
 }

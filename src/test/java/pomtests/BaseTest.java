@@ -20,12 +20,14 @@ public class BaseTest {
         PostModal postModal;
         SignUpModal signUpModal;
         UserPage userPage;
+        CreatePostPage createPostPage;
         WebDriverWait wait;
 
         @BeforeMethod
         public void setUp() {
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
+            driver.manage().window().maximize();
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
             //if we change the implicitWait duration to millisecond and small value
             // we make the test flaky to test RETRY logic
@@ -35,6 +37,7 @@ public class BaseTest {
             homePage = new HomePage(driver);
             postModal = new PostModal(driver);
             signUpModal = new SignUpModal(driver);
+            createPostPage = new CreatePostPage(driver);
             userPage = new UserPage(driver);
         }
 

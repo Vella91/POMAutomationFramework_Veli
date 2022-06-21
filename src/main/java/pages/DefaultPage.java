@@ -17,6 +17,12 @@ public class DefaultPage extends BasePage {
     @FindBy(id = "nav-link-login")
     WebElement loginButton;
 
+    @FindBy(xpath = "//div[@id='toast-container']/*")
+    WebElement alertPopUp;
+
+    public WebElement getAlertPopUp() {
+        return alertPopUp;
+    }
 
   /*  By loginButton = By.id("nav-link-login");
     By postImage = By.xpath("//div[@class='post-feed-img']/img");*/
