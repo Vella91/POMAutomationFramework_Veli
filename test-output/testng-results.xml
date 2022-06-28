@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results retried="1" ignored="0" total="8" passed="5" failed="2" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-06-28T06:35:41 EEST" name="suite1" finished-at="2022-06-28T06:37:17 EEST" duration-ms="95772">
+    <groups>
+    </groups>
+    <test started-at="2022-06-28T06:35:41 EEST" name="SmokeTests" finished-at="2022-06-28T06:37:17 EEST" duration-ms="95772">
+      <class name="pomtests.SmokeTests">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:pomtests.SmokeTests@2812b107]" started-at="2022-06-28T06:35:41 EEST" name="setUp" finished-at="2022-06-28T06:35:46 EEST" duration-ms="4674" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method retried="true" signature="createAccount()[pri:0, instance:pomtests.SmokeTests@2812b107]" started-at="2022-06-28T06:35:46 EEST" name="createAccount" finished-at="2022-06-28T06:36:10 EEST" duration-ms="23686" status="SKIP">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"#nav\-link\-new\-post"}
+  (Session info: chrome=102.0.5005.115)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.3', revision: '7b1ebf28ef'
+System info: host: 'MBGNW0204', ip: '192.168.137.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [1cfd2bd946a2b41da2a0ec0a01c54560, findElement {using=id, value=nav-link-new-post}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.115, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\VELICH~1.SUV\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:64777}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64777/devtoo..., se:cdpVersion: 102.0.5005.115, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 1cfd2bd946a2b41da2a0ec0a01c54560]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#nav\-link\-new\-post"}
+  (Session info: chrome=102.0.5005.115)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.3', revision: '7b1ebf28ef'
+System info: host: 'MBGNW0204', ip: '192.168.137.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [1cfd2bd946a2b41da2a0ec0a01c54560, findElement {using=id, value=nav-link-new-post}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.115, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\VELICH~1.SUV\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:64777}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64777/devtoo..., se:cdpVersion: 102.0.5005.115, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 1cfd2bd946a2b41da2a0ec0a01c54560
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:385)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:377)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+at jdk.proxy2/jdk.proxy2.$Proxy18.isDisplayed(Unknown Source)
+at pages.HomePage.isNewPostButtonDisplayed(HomePage.java:55)
+at pomtests.SmokeTests.createAccount(SmokeTests.java:60)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createAccount -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:pomtests.SmokeTests@2812b107]" started-at="2022-06-28T06:36:10 EEST" name="tearDown" finished-at="2022-06-28T06:36:10 EEST" duration-ms="930" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=createAccount status=SKIP method=SmokeTests.createAccount()[pri:0, instance:pomtests.SmokeTests@2812b107] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:pomtests.SmokeTests@2812b107]" started-at="2022-06-28T06:36:10 EEST" name="setUp" finished-at="2022-06-28T06:36:11 EEST" duration-ms="939" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="createAccount()[pri:0, instance:pomtests.SmokeTests@2812b107]" started-at="2022-06-28T06:36:11 EEST" name="createAccount" finished-at="2022-06-28T06:36:34 EEST" duration-ms="22087" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"#nav\-link\-new\-post"}
+  (Session info: chrome=102.0.5005.115)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.3', revision: '7b1ebf28ef'
+System info: host: 'MBGNW0204', ip: '192.168.137.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e956d3f624e58f8ffc6b3f0c77016523, findElement {using=id, value=nav-link-new-post}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.115, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\VELICH~1.SUV\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:64813}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64813/devtoo..., se:cdpVersion: 102.0.5005.115, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: e956d3f624e58f8ffc6b3f0c77016523]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#nav\-link\-new\-post"}
+  (Session info: chrome=102.0.5005.115)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.3', revision: '7b1ebf28ef'
+System info: host: 'MBGNW0204', ip: '192.168.137.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e956d3f624e58f8ffc6b3f0c77016523, findElement {using=id, value=nav-link-new-post}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.115, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\VELICH~1.SUV\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:64813}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64813/devtoo..., se:cdpVersion: 102.0.5005.115, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: e956d3f624e58f8ffc6b3f0c77016523
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:385)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:377)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+at jdk.proxy2/jdk.proxy2.$Proxy18.isDisplayed(Unknown Source)
+at pages.HomePage.isNewPostButtonDisplayed(HomePage.java:55)
+at pomtests.SmokeTests.createAccount(SmokeTests.java:60)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:262)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:62)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createAccount -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:pomtests.SmokeTests@2812b107]" started-at="2022-06-28T06:36:34 EEST" name="tearDown" finished-at="2022-06-28T06:36:34 EEST" duration-ms="360" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=createAccount status=FAILURE method=SmokeTests.createAccount()[pri:0, instance:pomtests.SmokeTests@2812b107] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:pomtests.SmokeTests@2812b107]" started-at="2022-06-28T06:36:34 EEST" name="setUp" finished-at="2022-06-28T06:36:35 EEST" duration-ms="949" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="createNewPostFailing()[pri:0, instance:pomtests.SmokeTests@2812b107]" started-at="2022-06-28T06:36:35 EEST" name="createNewPostFailing" finished-at="2022-06-28T06:36:38 EEST" duration-ms="3283" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createNewPostFailing -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:pomtests.SmokeTests@2812b107]" started-at="2022-06-28T06:36:38 EEST" name="tearDown" finished-at="2022-06-28T06:36:38 EEST" duration-ms="146" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=createNewPostFailing status=SUCCESS method=SmokeTests.createNewPostFailing()[pri:0, instance:pomtests.SmokeTests@2812b107] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:pomtests.SmokeTests@2812b107]" started-at="2022-06-28T06:36:38 EEST" name="setUp" finished-at="2022-06-28T06:36:39 EEST" duration-ms="918" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="likePostTest()[pri:0, instance:pomtests.SmokeTests@2812b107]" started-at="2022-06-28T06:36:39 EEST" name="likePostTest" finished-at="2022-06-28T06:36:43 EEST" duration-ms="3641" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- likePostTest -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:pomtests.SmokeTests@2812b107]" started-at="2022-06-28T06:36:43 EEST" name="tearDown" finished-at="2022-06-28T06:36:43 EEST" duration-ms="183" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=likePostTest status=SUCCESS method=SmokeTests.likePostTest()[pri:0, instance:pomtests.SmokeTests@2812b107] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:pomtests.SmokeTests@2812b107]" started-at="2022-06-28T06:36:43 EEST" name="setUp" finished-at="2022-06-28T06:36:44 EEST" duration-ms="872" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="loginTest()[pri:0, instance:pomtests.SmokeTests@2812b107]" started-at="2022-06-28T06:36:44 EEST" name="loginTest" finished-at="2022-06-28T06:36:47 EEST" duration-ms="2641" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:pomtests.SmokeTests@2812b107]" started-at="2022-06-28T06:36:47 EEST" name="tearDown" finished-at="2022-06-28T06:36:47 EEST" duration-ms="146" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=loginTest status=SUCCESS method=SmokeTests.loginTest()[pri:0, instance:pomtests.SmokeTests@2812b107] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:pomtests.SmokeTests@2812b107]" started-at="2022-06-28T06:36:47 EEST" name="setUp" finished-at="2022-06-28T06:36:48 EEST" duration-ms="863" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="loginTestEndToEnd()[pri:0, instance:pomtests.SmokeTests@2812b107]" started-at="2022-06-28T06:36:48 EEST" name="loginTestEndToEnd" finished-at="2022-06-28T06:36:50 EEST" duration-ms="2881" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTestEndToEnd -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:pomtests.SmokeTests@2812b107]" started-at="2022-06-28T06:36:50 EEST" name="tearDown" finished-at="2022-06-28T06:36:51 EEST" duration-ms="170" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=loginTestEndToEnd status=SUCCESS method=SmokeTests.loginTestEndToEnd()[pri:0, instance:pomtests.SmokeTests@2812b107] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:pomtests.SmokeTests@2812b107]" started-at="2022-06-28T06:36:51 EEST" name="setUp" finished-at="2022-06-28T06:36:51 EEST" duration-ms="874" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="logoutTest()[pri:0, instance:pomtests.SmokeTests@2812b107]" started-at="2022-06-28T06:36:51 EEST" name="logoutTest" finished-at="2022-06-28T06:37:12 EEST" duration-ms="20074" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//i[contains(@class, 'sign-out')]"}
+  (Session info: chrome=102.0.5005.115)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.3', revision: '7b1ebf28ef'
+System info: host: 'MBGNW0204', ip: '192.168.137.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [60602944c5a289c4301e114c21baf597, findElement {using=xpath, value=//i[contains(@class, 'sign-out')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.115, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\VELICH~1.SUV\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:64983}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64983/devtoo..., se:cdpVersion: 102.0.5005.115, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 60602944c5a289c4301e114c21baf597]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//i[contains(@class, 'sign-out')]"}
+  (Session info: chrome=102.0.5005.115)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.3', revision: '7b1ebf28ef'
+System info: host: 'MBGNW0204', ip: '192.168.137.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [60602944c5a289c4301e114c21baf597, findElement {using=xpath, value=//i[contains(@class, 'sign-out')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.115, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\VELICH~1.SUV\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:64983}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64983/devtoo..., se:cdpVersion: 102.0.5005.115, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 60602944c5a289c4301e114c21baf597
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:385)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:377)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+at jdk.proxy2/jdk.proxy2.$Proxy18.click(Unknown Source)
+at pages.HomePage.clickLogoutButton(HomePage.java:50)
+at pomtests.SmokeTests.logoutTest(SmokeTests.java:92)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logoutTest -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:pomtests.SmokeTests@2812b107]" started-at="2022-06-28T06:37:12 EEST" name="tearDown" finished-at="2022-06-28T06:37:12 EEST" duration-ms="333" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=logoutTest status=FAILURE method=SmokeTests.logoutTest()[pri:0, instance:pomtests.SmokeTests@2812b107] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:pomtests.SmokeTests@2812b107]" started-at="2022-06-28T06:37:12 EEST" name="setUp" finished-at="2022-06-28T06:37:13 EEST" duration-ms="913" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="viewUserPageAndFollowUser()[pri:0, instance:pomtests.SmokeTests@2812b107]" started-at="2022-06-28T06:37:13 EEST" name="viewUserPageAndFollowUser" finished-at="2022-06-28T06:37:17 EEST" duration-ms="3980" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- viewUserPageAndFollowUser -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:pomtests.SmokeTests@2812b107]" started-at="2022-06-28T06:37:17 EEST" name="tearDown" finished-at="2022-06-28T06:37:17 EEST" duration-ms="180" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=viewUserPageAndFollowUser status=SUCCESS method=SmokeTests.viewUserPageAndFollowUser()[pri:0, instance:pomtests.SmokeTests@2812b107] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- pomtests.SmokeTests -->
+    </test> <!-- SmokeTests -->
+  </suite> <!-- suite1 -->
+</testng-results>

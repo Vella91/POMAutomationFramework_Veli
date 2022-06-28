@@ -1,7 +1,7 @@
 <suite name="suite1" verbose="1" parallel="classes">
-<test name="SmokeTests">
-    <classes>
-        <class name="pomtests.SmokeTests"/>
-    </classes>
-</test>
+      <test name="SmokeTests">
+          <classes>
+                   <class name="pomtests.SmokeTests"/>
+          </classes>
+      </test>
 </suite>

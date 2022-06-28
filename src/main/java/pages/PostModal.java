@@ -23,12 +23,6 @@ public class PostModal extends BasePage {
         return postModalFilledHeartIcon;
     }
 
-    /*
-    By postModalImage = By.xpath("//div[@class='post-modal-img']/img");
-    By postModalAuthorNameHyperlink = By.xpath("//div[@class='post-modal-comments']//a[@class='post-user']");
-    By postModalHeartIcon = By.xpath("//i[@class='like far fa-heart fa-2x']");
-    By postModalDislikeIcon = By.xpath("//i[@class='ml-4 far fa-thumbs-down fa-2x']");*/
-
     public void clickHeartIcon(){
         postModalHeartIcon.click();
     }
@@ -37,12 +31,6 @@ public class PostModal extends BasePage {
         postModalDislikeIcon.click();
     }
 
-   /* public void clickPostAuthorNameHyperlink(){
-        driver.findElement(postModalAuthorNameHyperlink).click();
-    }*/
-
-
-    //change the locator
     //assertion methods
     public boolean IsPostLiked(){
         return postModalFilledHeartIcon.isDisplayed();

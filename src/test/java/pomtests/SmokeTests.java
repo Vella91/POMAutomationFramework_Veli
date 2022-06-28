@@ -8,7 +8,7 @@ import org.testng.annotations.*;
 public class SmokeTests extends BaseTest {
 
 
-    @Test(testName = "user successfully logs in")
+    @Test(testName = "logInOnly")
     public void loginTest() throws InterruptedException {
         driver.get("http://training.skillo-bg.com/");
         defaultPage.clickLoginButton();
@@ -21,7 +21,7 @@ public class SmokeTests extends BaseTest {
         Assert.assertTrue(homePage.isUserLoggedIn());
     }
 
-    @Test(testName = "user successfully logs in")
+    @Test(testName = "logInHappyPath")
     public void loginTestEndToEnd() throws InterruptedException {
         driver.get("http://training.skillo-bg.com/");
         defaultPage.clickLoginButton();
@@ -45,14 +45,13 @@ public class SmokeTests extends BaseTest {
         wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//div[@class='icons-container']/i[@class='like far fa-heart fa-2x']"))));
 */
         postModal.clickHeartIcon();
-
         wait.until(ExpectedConditions.visibilityOf(postModal.getPostModalFilledHeartIcon()));
         Assert.assertTrue(postModal.IsPostLiked());
         logoutTest();
     }
 
     @Test(retryAnalyzer = utils.Retry.class)
-    public void createAccount(){
+    public void createAccount() throws InterruptedException {
         driver.get("http://training.skillo-bg.com/");
         defaultPage.clickLoginButton();
         loginModal.clickRegisterButton();
@@ -87,13 +86,8 @@ public class SmokeTests extends BaseTest {
 
 
     @Test
-    public void logoutTest(){
-        //click home button from any page???
+    public void logoutTest() {
+        driver.navigate().refresh();
         homePage.clickLogoutButton();
-        wait.until(ExpectedConditions.visibilityOf(defaultPage.getAlertPopUp()));
-
-        //logout functionality from every place
-        //click the home button
-        //click the logout button
     }
 }
